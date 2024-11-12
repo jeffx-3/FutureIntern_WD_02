@@ -1,12 +1,19 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from .models import Employee
 
 # Create your views here.
+
 def home(request):
-    return render(request, 'home.html')
+    employees = Employee.objects.all()
+    return render(request, 'home.html', {'employees': employees})
+
+def employee_details(request, employee_name):
+    employee = get_object_or_404(employee, name=employee_name)
+    return render(request, 'employee_detail.html', {'employee': employee})
 
 # Register view
 def register(request):

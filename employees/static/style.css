@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+
+}
+
+/*nav styling*/
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    background: black;
+    color: white;
+    padding: 15px;
+    font-family: "Raleway", serif;
+    max-width: 100%;
+}
+nav ul{
+    display: inline-flex;
+    align-items: center;
+    gap: 2rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+nav ul li{
+    list-style: none;
+}
+
+
+
+/*forms styling */
+.page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 100vh;
+    background: whitesmoke;
+}
+.page .forms h2{
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+}
+.page .forms input{
+    width: 100%;
+    border-radius: 7px;
+    border-style: none;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.page .forms button{
+    border-style: none;
+    border-radius: 7px;
+    padding: 15px;
+    margin-left: 40%;
+    background: black;
+    color: white;
+}
+.page .forms button:hover{
+    background: blue;
+    color: black;
+    transform: transition 0.3s ease;
+}
+
+/*employee page design(home) */
+h2{
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-top: 10px;
+    content: "";
+}
+.emps{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    justify-content: center;
+    padding: 50px;
+
+    
+
+}
+.emps .details{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.emps .details img{
+    height: 80px;
+    width: 80px;
+    border-radius: 80px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+.emps .details h3{
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+.emps .person{
+    padding: 15px;
+    background: whitesmoke;
+    border-radius: 12px;
+    
+}
+.emps .person p{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    margin-bottom: 5px;
+    
+    
+
+}
+.emps .person .btns{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+    margin-top: 10px;
+}
+.emps .person .btns button{
+    border-style: none;
+    border-radius: 5px;
+    padding: 10px;
+    background: black;
+    color: white;
+
+}
+.emps .person .btns button a{
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    gap: 2px;
+    align-items: center;
+
+}
+
+
+
+
+
+

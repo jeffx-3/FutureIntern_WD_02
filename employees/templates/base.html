@@ -1,0 +1,33 @@
+{% load static %}
+<head>
+    {% block title %}<title>iHR|simplified employee management</title>{% endblock title %}
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <!--Boxicon icons-->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="{% static "style.css" %}">
+
+
+
+
+</head>
+
+<nav>
+    <h3>iHR</h3>
+    <ul>
+        <li><a href="">Activities</a></li>
+            <li><a href="">Payroll</a></li>
+                <li><a href="">Admin</a></li>
+
+
+    </ul>
+
+</nav>
+
+{% block content %}
+
+{% endblock content %}

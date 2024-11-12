@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}<title> iHR|Admin Pannel</title> {% endblock title %}
+
+{% block content %}
+<h2>WORK FORCE</h2>
+<div class="emps">
+    {% for employee in  employees%}
+
+    <div class="person">
+    <div class="details">
+    <img src="{{ employee.image.url }}" alt={{employee.image}}>
+    <h3>{{employee.name}}</h3>
+    </div>
+    
+    <div class="info">
+        <p><box-icon name='chair' color="coral"></box-icon>{{employee.position}}</p><br>
+        <p><box-icon name='door-open' type='solid' color="coral" ></box-icon>{{employee.dept}}</p><br>
+        <p><box-icon type='solid' name='contact' color="coral"></box-icon>{{employee.contact}}</p><br>
+        <p><box-icon name='pencil' type='solid' color="coral"></box-icon>{{employee.employment_type}}</p><br>
+        <p><box-icon type='solid' name='calendar-plus' color="coral"></box-icon> {{employee.hired}}</p><br>
+    </div>
+    <div class="btns">
+<button><a href="{% url 'name' employee.name %}">More<box-icon name='right-arrow-alt'color="coral" ></box-icon></a></button>
+    <button><a href="#">Message<box-icon name='message-rounded-dots' color="coral"></box-icon></a></button>
+    </div>
+</div>
+   
+    {% endfor %}
+
+ </div>
+
+
+
+
+
+
+
+
+{% endblock content %}

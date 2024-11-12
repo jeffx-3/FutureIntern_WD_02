@@ -1,5 +1,6 @@
 {% load static %}
 <link href="{% static "style.css" %}" rel="stylesheet">
+<div class="page">
 <div class="forms">
 <h2>Login</h2>
 <form method="POST">
@@ -9,4 +10,5 @@
     <button type="submit">Login</button>
 </form>
 <p>Don't have an account?<a href="{% url 'register' %}"> Register here</a></p>
+</div>
 </div>
