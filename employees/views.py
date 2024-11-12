@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Employee
 
 # Create your views here.
-
+@login_required
 def home(request):
     employees = Employee.objects.all()
     return render(request, 'home.html', {'employees': employees})
@@ -27,7 +27,7 @@ def register(request):
             else:
                 user = User.objects.create_user(username=username, password=password)
                 user.save()
-                messages.success(request, 'Account created successfully')
+                messages.success(request, 'Account created successfully!')
                 return redirect('login')
         else:
             messages.error(request, 'Passwords do not match')
@@ -43,7 +43,7 @@ def login_view(request):
             login(request, user)
             return redirect('home')  # Redirect to a dashboard or homepage
         else:
-            messages.error(request, 'Invalid username or password')
+            messages.error(request, 'Invalid username or password!')
     return render(request, 'accounts/login.html')
 
 # Logout view
